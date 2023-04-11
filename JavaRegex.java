@@ -8,7 +8,7 @@ package com.bridgelabz.ragex;
 	public class JavaRegex {
 		public static void main(String[] args) {
 
-					String regex = "^.{8,}$";
+					String regex = "^(?=.*[A-Z]).{8,}$";
 
 					Scanner sc = new Scanner(System.in);
 					System.out.println("Enter A Password: ");
