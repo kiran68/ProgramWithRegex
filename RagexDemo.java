@@ -3,28 +3,28 @@ package com.bridgelabz.ragex;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.Scanner;
+
 public class RagexDemo {
 
 	public static void main(String[] args) {
-		System.out.println("Enter The First Name : ");
+		
+		System.out.println("Enter The Last Name : ");
 		Scanner sc = new Scanner(System.in);
-		String data =sc.nextLine();
+		String lastName = sc.nextLine();
 		
-		String regex = ( "^[A-Z][a-zA-Z]{2,}$");
+	
+		String regex = ("^[A-Z][a-zA-Z]{2,}$");
 		Pattern pattern = Pattern.compile(regex);
-		
-		
-		Matcher matcher = pattern.matcher(data);
+
+		Matcher matcher = pattern.matcher( lastName);
 		boolean result = matcher.matches();
-		
+
 		if (result) {
-			System.out.println("First Name : " + data);
+			System.out.println("Pattern Is Match Last Name Name");
+			System.out.println( "Last Name :"    + lastName);
+		} else {
+			System.out.println("Pattern not matches");
 		}
-		else{
-	System.out.println("Pattern not matches");
-		}
-		
-			
-		
+
 	}
 }
